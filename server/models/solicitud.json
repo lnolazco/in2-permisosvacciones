@@ -1,0 +1,40 @@
+{
+  "name": "solicitud",
+  "plural": "solicitudes",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "usuarioid": {
+      "type": "string",
+      "required": true
+    },
+    "conceptoid": {
+      "type": "string",
+      "required": true
+    },
+    "fechainicio": {
+      "type": "date",
+      "required": true
+    },
+    "fechafin": {
+      "type": "date"
+    },
+    "estado": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "concepto": {
+      "type": "belongsTo",
+      "model": "concepto",
+      "foreignKey": "conceptoid"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
