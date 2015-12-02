@@ -7,25 +7,27 @@ Se utiliza lo siguiente:
 
 Inicialmente se hizo con mongodb por lo que dejaremos la explicación para su implementación también.
 
-##Pre Requisitos
+## Pre Requisitos
 
-Instalar nodejs
+### Instalar nodejs
 https://nodejs.org/en/
 
-Instalar MySql
+### Instalar MySql
 http://www.mysql.com/downloads/
 
-Instalar mongodb
+### Instalar mongodb
 https://www.mongodb.org/
 
-Instalar Loopback framework
+### Instalar Loopback framework
+```batch
 npm install loopback -g
 sudo npm install loopback -g
+```
 
-Instalar Mocha para los unit tests
+### Instalar Mocha para los unit tests
 npm install mocha -g
 
-##Crear proyecto
+## Crear proyecto
 
 Los pasos se encuentran en:
 http://loopback.io/getting-started/
@@ -33,14 +35,21 @@ http://loopback.io/getting-started/
 En este proyecto se hizo:
 Ir al directorio raíz del proyecto y ejecutar:
 
-'slc loopback'
+```batch
+slc loopback
+```
+
 Nombre de aplicación: permisosvacaciones
 
-##Conexión a base de datos MySql
+## Conexión a base de datos MySql
 Instalar el conector:
-`npm install loopback-connector-mysql --save`
+```batch
+npm install loopback-connector-mysql --save
+```
 Luego indicar el nombre del datasource:
-`slc loopback:datasource permisosvacacionesmysql`
+```batch
+slc loopback:datasource permisosvacacionesmysql
+```
 
 configurar el archivo: ./server/datasources.json
 
@@ -61,11 +70,15 @@ con los parámetros de conexión a la bbdd, por ejemplo en mi caso es:
 Mas información:
 https://docs.strongloop.com/display/public/LB/MySQL+connector
 
-##Conexión a base de datos mongodb
+## Conexión a base de datos mongodb
 Instalar el conector a la base de datos mongodb:
-`npm install loopback-connector-mongodb --save`
+```batch
+npm install loopback-connector-mongodb --save
+```
 Luego indicar el nombre del datasource:
-`slc loopback:datasource permisosvacaciones`
+```batch
+slc loopback:datasource permisosvacaciones
+```
 
 Luego añadir la configuración de la base de datos:
 ./server/datasources.json
@@ -80,10 +93,12 @@ Luego añadir la configuración de la base de datos:
 }
 ```
 
-##Añadir modelos
+## Añadir modelos
 Para añadir cada modelo realizar lo siguiente:
 
-`slc loopback:model`
+```batch
+slc loopback:model
+```
 
 y añadir los campos necesarios.
 
@@ -93,31 +108,41 @@ En el caso de mongodb al ser schemeless no es necesario este paso, lo irá crean
 Los scripts se encuentran en:
 ./databasescript/permisosvacacionesmysql.sql
 
-#Instalar proyecto
+# Instalar proyecto
 Descargar el fuente
+```batch
 git clone
+```
 
 Entrar al directorio
+```batch
 cd permisosvacaciones
+```
 
 Instalar dependencias
+```batch
 npm install
+```
 
-##Iniciar servidor web
+## Iniciar servidor web
 Ejecutar comando:
+```batch
 node .
+```
+Por defecto se habrá iniciado el servidor en el puerto :3000 y
+para abrir el explorador de las apis creadas ir a :3000/explorer
+```batch
+Web server listening at: http://localhost:3000
+Browse your REST API at http://localhost:3000/explorer
+```
 
-Por defecto se habrá iniciado el servidor en:
-...:3000/
-
-Para abrir el explorador de las apis creadas ir a:
-...:3000/explorer
-
-#TESTS
+# TESTS
 La implementación de tests unitarios se utilizó mocha.
 
 Para ejecutar los tests utilizar el comando:
-`mocha`
+```batch
+mocha
+```
 
 Para saber más sobre la configuración de este en un proyecto loopback ir a:
 https://www.npmjs.com/package/loopback-testing
