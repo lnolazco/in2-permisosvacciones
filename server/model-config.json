@@ -33,15 +33,15 @@
     "public": false
   },
   "concepto": {
-    "dataSource": "permisosvacaciones",
+    "dataSource": "permisosvacacionesmysql",
     "public": true
   },
   "calendariolaboral": {
-    "dataSource": "permisosvacaciones",
+    "dataSource": "permisosvacacionesmysql",
     "public": true
   },
   "solicitud": {
-    "dataSource": "permisosvacaciones",
+    "dataSource": "permisosvacacionesmysql",
     "public": true
   }
 }

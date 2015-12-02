@@ -3,11 +3,13 @@
     "name": "db",
     "connector": "memory"
   },
-  "permisosvacaciones": {
+  "permisosvacacionesmysql": {
+    "name": "permisosvacacionesmysql",
+    "connector": "mysql",
     "host": "127.0.0.1",
-    "port": 27017,
-    "database": "permisosvacaciones",
-    "name": "permisosvacaciones",
-    "connector": "mongodb"
+    "port": 3306,
+    "database": "permisosvacacionesmysql",
+    "username": "root",
+    "password": "admin"
   }
 }
