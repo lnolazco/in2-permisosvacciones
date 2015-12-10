@@ -146,3 +146,5 @@ mocha
 
 Para saber más sobre la configuración de este en un proyecto loopback ir a:
 https://www.npmjs.com/package/loopback-testing
+
+Thanks :)
